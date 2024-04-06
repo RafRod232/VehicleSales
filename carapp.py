@@ -20,6 +20,8 @@ df['return'] = np.where(df['sellingprice'] > df['mmr'], 'profit', 'loss')
 df['month'] = df['saledate'].apply(lambda x: x.split()[1])
 
 app = Dash(__name__)
+server = app.server
+
 
 app.layout = html.Div(className="Parent_Div", children=[
     html.Div(id="Title", children='Car Salesman Information', style={'textAlign': 'center','font-size': 75,'font-family': 'FreeMono, monospace','font-style': 'italic'}),
