@@ -1,1 +1,1 @@
-# VehicleSales Deployment Application
+# Vehicle Sales Deployment Application
