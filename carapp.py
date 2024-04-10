@@ -12,6 +12,8 @@ with zipfile.ZipFile("car_prices.zip", 'r') as zip_ref:
 df = pd.read_csv("car_prices.csv")
 # getting rid of useless column
 df.drop(columns=["vin"], inplace=True)
+# made all values capitilized so it would affect the histogram visualization
+df['body']=df['body'].str.upper()
 #getting rid of null values
 df.dropna(inplace=True)
 # creating column to see if selling price caused a profit or loss
